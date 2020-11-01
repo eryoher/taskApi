@@ -1,0 +1,33 @@
+{
+  "name": "user_tasks",
+  "plural": "userTasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {},
+  "mixins": {     
+    "TimeStamp": {
+      "validateUpsert": true
+    }
+  }
+}
